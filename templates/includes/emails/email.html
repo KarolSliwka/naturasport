@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800,900"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style type="text/css">
+    html {
+        background-color: #fff;
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 4rem;
+    }
+
+    .info {
+        border-bottom: 2px dotted #b91971;
+        margin: 2rem 0 3rem 0;
+    }
+
+    .info-text,
+    .info-text-small {
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+
+    .info-text-small {
+        font-size: 1rem;
+    }
+
+    h1,
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #b91971;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        color: #b91971;
+        margin-bottom: 1rem;
+    }
+
+    .copy-text {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: #000;
+        margin-bottom: .5rem;
+    }
+
+    .message {
+        margin: 2rem 0 3rem 0;
+    }
+
+    .name-surname,
+    .email-address,
+    .subject,
+    .message-text {
+        font-weight: 300;
+        color: #000;
+        text-decoration: none !important;
+    }
+
+    .signature {
+        background: linear-gradient(#b91971 0 0) top right/15% 3px, linear-gradient(#b91971 0 0) bottom left/15% 3px, linear-gradient(#b91971 0 0) bottom left/3px 50%, linear-gradient(#b91971 0 0) top right/3px 50%, #fff;
+        background-repeat: no-repeat;
+        padding: 2rem;
+    }
+
+    .signature img {
+        width: 100%;
+        max-width: 160px;
+        margin-bottom: 1rem;
+    }
+
+    .signature-text {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+</style>
+
+<body>
+    <div class="container my-5">
+        <section class="info">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Witaj, {{ name|title }}!</h1>
+                    <p class="lead info-text">Dziękujemy za Twoją wiadomość.<br>Postarmy się na nią odpowiedzieć z
+                        prędkością
+                        światła.
+                    </p>
+                    <p class="lead info-text-small">Psst.., ale nie będziemy łamać przepisów drogowych.</p>
+                </div>
+            </div>
+        </section>
+        <section class="message">
+            <h2>Kopia Twojej wiadomości</h2>
+            <p class="lead copy-text">Imię i Nazwisko: <span class="name-surname">{{ name|title }}</span></p>
+            <p class="lead copy-text">Firma: <span class="subject">{{ company }}</span></p>
+            <p class="lead copy-text">Telefon: <span class="subject">{{ phone_number }}</span></p>
+            <p class="lead copy-text">E-mail: <span class="email-address">{{ from_email }}</span></p>
+            <p class="lead copy-text">Wiadomość: <span class="message-text">{{ message }}</span></p>
+        </section>
+        <section class="signature">
+            <p class="lead signature-text">Pozdrawiam serdecznie,<br>Life&Living</p>
+            <p class="lead signature-text mb-1"><strong>Pracujemy w godzinach:</strong></p>
+            <p class="lead signature-text mb-1">Pon - Pt: <span>08:00 - 16:00</span></p>
+        </section>
+    </div>
+</body>
+
+</html>
