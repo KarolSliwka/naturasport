@@ -1,0 +1,12 @@
+html,
+body {
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 100%;
+    min-width: 320px;
+    background-color: #fff; //rgb(253, 253, 253);
+}
+
+main > .main-container {
+    padding: 70px 15px 0;
+}

@@ -1,0 +1,30 @@
+.error404,
+.error500 {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    margin-top: 2rem;
+
+    .image-container {
+        height: 500px;
+        width: 100%;
+        background-image: url("https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 3rem;
+        color: #b91971;
+        text-align: center;
+        z-index: 999;
+    }
+
+    p {
+        z-index: 999;
+        margin-top: 1rem;
+        font-size: 1.25rem;
+        color: #b91971;
+        text-align: center;
+    }
+}
