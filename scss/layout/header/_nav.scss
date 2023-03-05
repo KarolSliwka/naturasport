@@ -1,0 +1,77 @@
+// Navigation
+nav {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    background-color: $nav-background-color;
+    border-bottom: 1px solid $nav-border-color;
+
+    .navbar-brand {
+        img {
+            width: 100%;
+            max-width: 140px;
+        }
+    }
+
+    .nav-item {
+        padding: 0;
+
+        .nav-link {
+            color: $nav-links-color;
+            text-transform: capitalize;
+            font-weight: 400;
+            font-size: 1rem;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            margin: 0.5rem;
+
+            &:hover {
+                color: $nav-link-color-hover;
+            }
+        }
+
+        // reservation special style
+        .reservation {
+            color: $reserv-color;
+            background-color: $reserv-background-color;
+            border-radius: 1.25rem;
+            padding: 0;
+            padding: 0.5rem 0.85rem !important;
+            margin-left: 1rem;
+
+            &:hover {
+                color: $reserv-color-hover;
+                background-color: $reserv-background-color-hover;
+            }
+        }
+
+        .reservation-active {
+            color: $reserv-color-hover;
+            background-color: $reserv-background-color-hover;
+        }
+    }
+
+    .active {
+        position: relative;
+        color: $nav-link-color-active !important;
+
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            left: 0;
+            right: 100%;
+            bottom: 2px;
+            background: $nav-link-color-active;
+            height: 2px;
+        }
+    }
+
+    // hover.css override
+    .hvr-underline-from-left:before {
+        background: $nav-link-color-hover;
+        -webkit-transition-duration: 0.15s;
+        transition-duration: 0.15s;
+        height: 2px;
+        bottom: 2px;
+    }
+}

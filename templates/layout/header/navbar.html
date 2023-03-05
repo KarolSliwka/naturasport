@@ -1,11 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
         <a class="navbar-brand" href="{% url 'home' %}">
-            {% if logotype %}
-            {% for image in logotype %}
-            <img src="{{ image.image.url }}" alt="" class="navbar-logo">
-            {% endfor %}
-            {% endif %}
+            <img src="{{ MEDIA_URL }}images/logo/natura-sport-logo.png" alt="" class="navbar-logo">
         </a>
         <button class="navbar-toggler hamburger" id="hamburger-1" type="button" data-bs-toggle="collapse"
             data-bs-target="#nav_content" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -45,7 +41,7 @@
                         href="{% url 'contact' %}">Kontakt</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if 'rezerwacja' in request.get_full_path %}active{% else %}hvr-underline-from-left{% endif %}"
+                    <a class="nav-link reservation {% if 'rezerwacja' in request.get_full_path %}reservation-active{% endif %}"
                         href="{% url 'reservation' %}">Rezerwacja</a>
                 </li>
             </ul>
