@@ -1,3 +1,11 @@
 from django.shortcuts import render
+from .models import *
 
-# Create your views here.
+
+def equipment(request):
+
+    template = 'equipment/index.html'
+    context = {
+    }
+
+    return render(request, template, context)
